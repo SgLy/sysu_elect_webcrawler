@@ -79,7 +79,7 @@ class PCL:
 
         #set parameters
         self.para = {'kclb': 30, 'xnd':'2015-2016', 'xq': '3','fromSearch': 'false', 'sid': self.sid}
-        self.courseurl = 'http://uems.sysu.edu.cn/elect/s/courses?' + urllib.urlencode(self.para)
+        self.courseurl = 'http://uems.sysu.edu.cn/elect/s/courses?xqm=4&sort=syrs&ord=&xnd=&xq=&' + urllib.urlencode(self.para) + '&conflict=&blank=1&hides=&fromSearch=false&xkjdszid=2016231002001&kcmc=&sjdd=&kkdw=&rkjs=&skyz=&xf1=&xf2=&bkh=&sfbyb='
 
         #request for the website which shows the list of public corses
         self.req4 = urllib2.Request(self.courseurl, headers = self.headers)
